@@ -21,8 +21,8 @@ export default function BusLayer({ map }: BusLayerProps) {
     loadedRef.current = true
     setDataStatus('bus', 'loading')
 
-    map.addSource('bus-lines', { type: 'geojson', data: '/data/bus-lines.geojson' })
-    map.addSource('bus-stops', { type: 'geojson', data: '/data/bus-stops.geojson' })
+    map.addSource('bus-lines', { type: 'geojson', data: `${import.meta.env.BASE_URL}data/bus-lines.geojson` })
+    map.addSource('bus-stops', { type: 'geojson', data: `${import.meta.env.BASE_URL}data/bus-stops.geojson` })
 
     map.addLayer(
       {

@@ -32,8 +32,11 @@ export default function TransitLayers({ map }: TransitLayersProps) {
 
     setDataStatus('rail', 'loading')
 
-    map.addSource('rail-lines', { type: 'geojson', data: '/data/rail-lines.geojson' })
-    map.addSource('rail-stations', { type: 'geojson', data: '/data/rail-stations.geojson' })
+    map.addSource('rail-lines', { type: 'geojson', data: `${import.meta.env.BASE_URL}data/rail-lines.geojson` })
+    map.addSource('rail-stations', {
+      type: 'geojson',
+      data: `${import.meta.env.BASE_URL}data/rail-stations.geojson`,
+    })
 
     map.addLayer({
       id: 'rail-lines-casing',
