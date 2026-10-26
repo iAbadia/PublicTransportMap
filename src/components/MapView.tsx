@@ -3,11 +3,6 @@ import { Map as MapLibreMap, NavigationControl, GeolocateControl, ScaleControl }
 import 'maplibre-gl/dist/maplibre-gl.css'
 
 const LONDON_CENTER: [number, number] = [-0.1276, 51.5074]
-const LONDON_BOUNDS: [[number, number], [number, number]] = [
-  [-0.6, 51.28],
-  [0.45, 51.75],
-]
-
 const BASEMAP_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
 
 interface MapViewProps {
@@ -26,9 +21,8 @@ export default function MapView({ onMapReady }: MapViewProps) {
       style: BASEMAP_STYLE,
       center: LONDON_CENTER,
       zoom: 11,
-      minZoom: 9,
+      minZoom: 5,
       maxZoom: 18,
-      maxBounds: LONDON_BOUNDS,
       attributionControl: { compact: true },
     })
 

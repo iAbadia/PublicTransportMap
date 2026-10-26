@@ -104,7 +104,7 @@ export default function BusLayer({ map }: BusLayerProps) {
 
   if (dataStatus === 'loading') {
     return (
-      <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 rounded-full bg-neutral-900/90 px-4 py-1.5 text-xs text-neutral-200 shadow-lg backdrop-blur-md">
+      <div role="status" className="data-notice">
         Loading bus routes…
       </div>
     )

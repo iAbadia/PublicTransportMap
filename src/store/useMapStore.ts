@@ -1,4 +1,6 @@
 import { create } from 'zustand'
+import { loadReferencePoints, type ReferencePoint } from '../lib/referencePoints'
+import { defaultTubeLines } from '../lib/railVisibility'
 
 export type Mode = 'tube' | 'overground' | 'dlr' | 'elizabeth-line' | 'tram' | 'bus'
 
@@ -12,6 +14,11 @@ export interface SelectedStation {
 }
 
 interface MapState {
+  visibleTubeLines: Record<string, boolean>
+  toggleTubeLine: (id: string) => void
+  referencePoints: ReferencePoint[]
+  addReferencePoint: (point: ReferencePoint) => void
+  removeReferencePoint: (id: string) => void
   visibleModes: Record<Mode, boolean>
   toggleMode: (mode: Mode) => void
   selectedStation: SelectedStation | null
@@ -21,6 +28,12 @@ interface MapState {
 }
 
 export const useMapStore = create<MapState>((set) => ({
+  visibleTubeLines: defaultTubeLines(),
+  toggleTubeLine: (id) => set(state => ({ visibleTubeLines: { ...state.visibleTubeLines, [id]: !state.visibleTubeLines[id] } })),
+  referencePoints: loadReferencePoints(),
+  addReferencePoint: (point) => set(state => ({ referencePoints: state.referencePoints.some(p => p.id === point.id)
+    ? state.referencePoints : [...state.referencePoints, point] })),
+  removeReferencePoint: (id) => set(state => ({ referencePoints: state.referencePoints.filter(p => p.id !== id) })),
   visibleModes: {
     tube: true,
     overground: true,

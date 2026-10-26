@@ -14,15 +14,15 @@ function App() {
   }, [])
 
   return (
-    <div className="relative h-screen w-screen bg-neutral-950">
+    <main className="map-app" aria-label="London transport map">
       <MapView onMapReady={onMapReady} />
       {map && <TransitLayers map={map} />}
       {map && <BusLayer map={map} />}
       <div className="pointer-events-none absolute inset-0">
-        <LayerControls />
+        <LayerControls map={map} />
         <StationPanel />
       </div>
-    </div>
+    </main>
   )
 }
 

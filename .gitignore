@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+*.local.json
+
+# Local design review captures
+.impeccable/review/
 
 # Editor directories and files
 .vscode/*
