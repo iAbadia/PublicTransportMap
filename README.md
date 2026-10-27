@@ -83,6 +83,8 @@ scripts/            Data refresh, MapLibre worker copying, and tests
 
 Built with React, TypeScript, Vite, MapLibre GL JS, Zustand, and Tailwind CSS.
 
+The favicon uses a multicolour woven L: coral and cyan routes meet at an amber interchange. Source artwork and usage notes are in [the branding folder](docs/branding/woven-l/README.md). The project-installed logo-design skill is in `.agents/skills/logo-design/`.
+
 ## Deployment
 
 Pushes to `main` trigger the GitHub Actions workflow: install dependencies, run tests and lint, build, and deploy to GitHub Pages. The workflow can also be started manually.

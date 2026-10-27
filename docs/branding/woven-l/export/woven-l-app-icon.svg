@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>London Transit Map</title><rect width="256" height="256" rx="57.6" fill="#181c20"/><g transform="translate(48.64 48.64) scale(0.62)"><title id="title">London Transit Map - woven interchange</title>
+<rect width="256" height="256" rx="48" fill="#181c20"/>
+<path fill="#f8cf76" fill-rule="evenodd" d="M32,224L72,224L224,224L224,196L100,196L112,184L100,172L224,172L224,144L112,144L112,32L84,32L84,156L72,144L60,156L60,32L32,32L32,184Z M90,184L72,202L54,184L72,166Z"/>
+<path fill="#ff7468" fill-rule="evenodd" d="M32,184L32,224L72,224Z M224,196L100,196L72,224L224,224Z M32,32L32,184L60,156L60,32Z"/>
+<path fill="#54c9db" fill-rule="evenodd" d="M224,144L112,144L112,32L84,32L84,156L100,172L224,172Z"/>
+</g></svg>

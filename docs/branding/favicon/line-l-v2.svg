@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Line L concept, balanced for small sizes</title>
+  <path fill="#000000" d="M40 30H80V174H168V214H40Z"/>
+  <path fill="#000000" fill-rule="evenodd" d="M216 194A32 32 0 1 1 152 194A32 32 0 1 1 216 194ZM200 194A16 16 0 1 0 168 194A16 16 0 1 0 200 194Z"/>
+</svg>
